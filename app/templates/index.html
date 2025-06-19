@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/static/css/style.css" />
+    <title>Lexical</title>
+  </head>
+  <body>
+    <main class="main">
+      <section>
+        <h1>New Entry:</h1>
+        <form class="form" method="POST">
+          <p class="form-input">
+            <label class="form-label" for="entry">Type text here</label>
+            <textarea
+              name="content"
+              id="entry"
+              class="form-textarea"
+              aria-label="Entry Content"
+            ></textarea>
+          </p>
+          <p class="language-input">
+            <label for="selection">Choose a language:</label>
+                <select name="language" id="language-input">
+                <option value="german">German</option>
+                <option value="latin">Latin</option>
+                </select>
+          </p>
+          <button type="submit" class="form-submit">Compute</button>
+        </form>
+      </section>
+      <section>
+      <h1>Output</h1>
+        {% if output|length == 0 %}
+        <article class="no-output-body">
+          <div class="no-output-div">
+            <h3 class="no-output-text">No output yet ... compute something!</h3>
+          </div>
+        </article>
+
+        {% else %} 
+        <article class="output">
+          <p class="output-content">{{ output [0] }}</p>
+        </article>
+        {% endif %}
+      </section>
+    </main>
+  </body>
+</html>

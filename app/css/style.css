@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@300&display=swap');
+
+body {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
+.main {
+    height: 100vh;
+    max-width: 600px; 
+    margin: 0 auto; 
+    padding: 0 20px; 
+}
+
+.form {
+    display: flex; 
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.form-input {
+    width: 100%;
+}
+
+.form-label {
+    display: block; 
+    margin-bottom: 10px;
+    font-style: italic; 
+}
+
+.form-textarea {
+    font-family: 'Crimson Pro', serif;
+    width: inherit;
+    height: auto; 
+    font-size: 18px;
+    padding: 12px 20px; 
+    border: none; 
+    background-color: #f3f6f6;
+    margin-bottom: 5px; 
+}
+
+.form-submit {
+    background-color: black;
+    border: none; 
+    font-size: 18px; 
+    font-weight: bold; 
+    padding: 5px 30px; 
+    border-radius: 10px; 
+    color: white; 
+    cursor: pointer;
+}
+
+.form-submit:hover {
+    background-color: gray;
+}
+
+.output {
+    margin-top: 50px; 
+    width: inherit;
+}
+
+.output-content {
+    font-size: 16px; 
+    line-height: 150%; 
+}
+
+.no-output-body {
+    margin-top: 100px; 
+    width: inherit;
+}
+
+.no-output-text {
+    text-align: center;
+    font-style: italic;
+    color:#f5f5f5;
+}
+
+.no-output-text:hover {
+    color:#cdcdcd;
+}
