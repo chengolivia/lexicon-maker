@@ -2,6 +2,8 @@ spacy
 cltk
 nltk
 pandas
+jupyter
+ipywidgets
 tqdm
 spacy-lookups-data
 https://github.com/explosion/spacy-models/releases/download/de_core_news_sm-3.8.0/de_core_news_sm-3.8.0-py3-none-any.whl
