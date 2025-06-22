@@ -24,9 +24,12 @@ def create_app(test_config=None):
         input = request.form.get("content")
         if input:
             lang = request.form.get("language")
+            try:
+                threshold = int(request.form.get("threshold", 0))
+            except ValueError:
+                threshold = 1
             g = Stemmer(lang)
-            output = g.count_words_from_text(input)
-        print(output)
+            output = g.count_words_from_text(input, thresh=threshold)
         return render_template('index.html', output=output)
 
     return app
