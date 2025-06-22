@@ -32,17 +32,18 @@
       </section>
       <section>
       <h1>Output</h1>
-        {% if output|length == 0 %}
+        {% if output is defined %}
+        <article class="output">
+          <p class="output-content">{{ output}}</p>
+        </article>
+
+        {% else %} 
         <article class="no-output-body">
           <div class="no-output-div">
             <h3 class="no-output-text">No output yet ... compute something!</h3>
           </div>
         </article>
 
-        {% else %} 
-        <article class="output">
-          <p class="output-content">{{ output [0] }}</p>
-        </article>
         {% endif %}
       </section>
     </main>

@@ -3,7 +3,6 @@ import os
 from flask import Flask, render_template, request
 from lexicon import Stemmer
 
-output = []
 def create_app(test_config=None):
     # create and configure the app
     app = Flask(__name__, instance_relative_config=True)
@@ -21,10 +20,13 @@ def create_app(test_config=None):
 
     @app.route("/", methods=["GET", "POST"])
     def index():
+        output = None
         input = request.form.get("content")
-        lang = request.form.get("language")
-        g = Stemmer(lang)
-        output = g.count_words_from_text(input)
-        return render_template('index.html', output=[output])
+        if input:
+            lang = request.form.get("language")
+            g = Stemmer(lang)
+            output = g.count_words_from_text(input)
+        print(output)
+        return render_template('index.html', output=output)
 
     return app
