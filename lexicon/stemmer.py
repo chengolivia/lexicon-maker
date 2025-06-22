@@ -1,10 +1,6 @@
 import string
-from nltk.stem.snowball import GermanStemmer
-from cltk.tokenizers.lat.lat import LatinWordTokenizer
-from cltk.text.lat import replace_jv
 from cltk import NLP
 from cltk.data.fetch import FetchCorpus
-from cltk.lemmatize.lat import LatinBackoffLemmatizer
 import spacy
 from . import SUPPORTED_LANGUAGES
 
