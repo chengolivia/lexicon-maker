@@ -1,0 +1,225 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@300&display=swap');
+
+body {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
+.main {
+    height: 100vh;
+    max-width: 600px; 
+    margin: 0 auto; 
+    padding: 0 20px; 
+}
+
+.form {
+    display: flex; 
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.form-input {
+    width: 100%;
+}
+
+.form-label {
+    display: block; 
+    margin-bottom: 10px;
+    font-style: italic; 
+}
+
+.form-textarea {
+    font-family: 'Crimson Pro', serif;
+    width: inherit;
+    height: auto; 
+    font-size: 18px;
+    padding: 12px 20px; 
+    border: none; 
+    background-color: 
+#f3f6f6;
+    margin-bottom: 5px; 
+}
+
+.form-submit {
+    background-color: black;
+    border: none; 
+    font-size: 18px; 
+    font-weight: bold; 
+    padding: 5px 30px; 
+    border-radius: 10px; 
+    color: white; 
+    cursor: pointer;
+}
+
+.form-submit:hover {
+    background-color: gray;
+}
+
+.output {
+    margin-top: 50px; 
+    width: inherit;
+}
+
+.output-content {
+    font-size: 16px; 
+    line-height: 150%; 
+}
+
+.no-output-body {
+    margin-top: 100px; 
+    width: inherit;
+}
+
+.no-output-text {
+    text-align: center;
+    font-style: italic;
+    color:
+#f5f5f5;
+}
+
+.no-output-text:hover {
+    color:
+#cdcdcd;
+} */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+
+body {
+    margin: 0;
+    box-sizing: border-box;
+    background-color: #f8f9fa;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    color: #2d3748;
+    line-height: 1.6;
+}
+
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
+.main {
+    min-height: 100vh;
+    max-width: 768px; 
+    margin: 0 auto; 
+    padding: 40px 24px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.form {
+    display: flex; 
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 32px;
+}
+
+.form-input {
+    width: 100%;
+}
+
+.form-label {
+    display: block; 
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #4a5568;
+    font-size: 14px;
+}
+
+.form-textarea {
+    font-family: inherit;
+    width: 100%;
+    min-height: 120px;
+    font-size: 16px;
+    padding: 16px 20px; 
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    background-color: #ffffff;
+    resize: vertical;
+    transition: all 0.2s ease;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.form-textarea:focus {
+    outline: none;
+    border-color: #3182ce;
+    box-shadow: 0 0 0 3px rgba(49, 130, 206, 0.1);
+}
+
+.form-textarea:hover {
+    border-color: #cbd5e0;
+}
+
+.form-submit {
+    background-color: #2d3748;
+    border: none; 
+    font-size: 14px; 
+    font-weight: 500; 
+    padding: 12px 24px; 
+    border-radius: 8px; 
+    color: white; 
+    cursor: pointer;
+    align-self: flex-end;
+    transition: all 0.2s ease;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.form-submit:hover {
+    background-color: #1a202c;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.form-submit:active {
+    transform: translateY(0);
+}
+
+.output {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e2e8f0;
+}
+
+.output-content {
+    font-size: 15px; 
+    line-height: 1.7;
+    color: #2d3748;
+}
+
+.no-output-body {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.no-output-text {
+    color: #a0aec0;
+    font-size: 16px;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.no-output-text:hover {
+    color: #718096;
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+    .main {
+        padding: 20px 16px;
+        max-width: 100%;
+    }
+    
+    .form-textarea {
+        font-size: 16px; /* Prevents zoom on iOS */
+    }
+    
+    .output {
+        padding: 20px;
+    }
+} 
